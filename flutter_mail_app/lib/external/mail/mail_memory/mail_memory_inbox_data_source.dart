@@ -1,0 +1,148 @@
+import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
+
+import '../../../infrastructure/mail/mail_details_dto.dart';
+import 'mail_memory_data_source.dart';
+
+class MailMemoryInboxDataSource extends MailMemoryDataSource {
+  // ignore: long-method
+  MailMemoryInboxDataSource() {
+    const uuid = Uuid();
+    mails = [
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Rocky',
+        replyTo: 'rocky@balboa.com',
+        subject: 'Adriaaannn',
+        content: 'Adriaaannn',
+        wasRead: false,
+        date: DateTime.parse("2021-10-16 10:15:20Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Apollo Doutrinador',
+        replyTo: 'apollodoutrinador@balboa.com',
+        subject: 'Ei garanhão, garanhão',
+        content: 'You going down, man. You going down.',
+        wasRead: false,
+        date: DateTime.parse("2021-10-15 17:30:00Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Ivan Drago',
+        replyTo: 'ivandrago@balboa.com',
+        subject: 'Se morrer, morreu',
+        content: '....',
+        wasRead: true,
+        date: DateTime.parse("2021-10-14 21:50:40Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Nigel',
+        replyTo: 'nigel@rdr2.com',
+        subject: 'Gaviiiinnnn',
+        content: 'Gav, where are you?',
+        wasRead: true,
+        date: DateTime.parse("2021-10-13 10:15:20Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Dutch',
+        replyTo: 'dutch@rdr2.com',
+        subject: 'I have a plan',
+        content: 'Tahiti....',
+        wasRead: true,
+        date: DateTime.parse("2021-10-12 18:42:22Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Goku',
+        replyTo: 'goku@dbz.com',
+        subject: 'Oi, eu sou o Goku',
+        content: 'Kamehameha',
+        wasRead: false,
+        date: DateTime.parse("2021-10-11 20:18:04Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Shun',
+        replyTo: 'shun@cdz.com',
+        subject: 'Yikiiiii',
+        content: 'Corrente de andromeda',
+        wasRead: true,
+        date: DateTime.parse("2021-10-10 17:05:01Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Vegeta',
+        replyTo: 'vegeta@cdz.com',
+        subject: 'Kakaroto',
+        content: 'Vermes....',
+        wasRead: true,
+        date: DateTime.parse("2021-10-09 23:20:20Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Hyoga',
+        replyTo: 'hyoga@cdz.com',
+        subject: 'Camus, meu mestre',
+        content: 'Execução aurora...',
+        wasRead: false,
+        date: DateTime.parse("2021-10-07 08:51:22Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Jiraya',
+        replyTo: 'jiraya@jiraya.com',
+        subject: 'Não o perdoo',
+        content: 'Espada olímpica....',
+        wasRead: false,
+        date: DateTime.parse("2021-10-06 03:30:22Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Jiban',
+        replyTo: 'jiban@jiban.com',
+        subject: 'Ayumiiiii',
+        content: 'Golpe jiban',
+        wasRead: true,
+        date: DateTime.parse("2021-10-06 03:30:22Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Ligeirinho',
+        replyTo: 'ligeirinho@warnerbros.com',
+        subject: 'Arriba arriba',
+        content: 'Arriba arriba',
+        wasRead: false,
+        date: DateTime.parse("2021-10-04 00:15:00Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Papalégua',
+        replyTo: 'papalegua@warnerbros.com',
+        subject: 'Beep beep',
+        content: 'Beep beep',
+        wasRead: false,
+        date: DateTime.parse("2021-10-02 21:12:19Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Chapolin',
+        replyTo: 'chapolin@chespirito.com',
+        subject: 'Não contavam com minha astúcia',
+        content: 'Sigam-me os bons',
+        wasRead: true,
+        date: DateTime.parse("2021-09-30 13:05:55Z"),
+      ),
+      MailDetailsDto(
+        uid: uuid.v4(),
+        fromOrTo: 'Nemesis',
+        replyTo: 'nemesis@re.com',
+        subject: 'Stars',
+        content: 'Staaaaaars....',
+        wasRead: true,
+        date: DateTime.parse("2021-09-28 00:00:01Z"),
+      ),
+    ];
+  }
+}
