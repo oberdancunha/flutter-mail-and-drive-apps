@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mail_and_drive_design_system/components/form/text_form_field_ds.dart';
+import 'package:flutter_mail_and_drive_design_system/components/search/search_ds.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
+
 import '../../application/mail/mail_store.dart';
 
 class SearchWidget extends StatefulWidget {
@@ -21,19 +22,12 @@ class _SearchWidgetState extends State<SearchWidget> {
   }
 
   @override
-  Widget build(BuildContext context) => TextFormFieldDS(
-        labelText: 'Pesquisar',
-        suffixIcon: IconButton(
-          icon: const Icon(Icons.clear_rounded),
-          onPressed: () {
-            _controller.clear();
-            _mailStore.search();
-          },
-          iconSize: 30,
-        ),
-        height: 1,
+  Widget build(BuildContext context) => SearchDS(
+        onPressed: () {
+          _controller.clear();
+          _mailStore.search();
+        },
         controller: _controller,
-        horizontalPadding: 15,
         onChanged: (term) => EasyDebounce.debounce(
           'search',
           const Duration(milliseconds: 500),
