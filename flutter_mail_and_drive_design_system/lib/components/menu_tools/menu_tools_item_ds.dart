@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
-class MenuToolsItemWidget extends StatelessWidget {
+class MenuToolsItemDS extends StatelessWidget {
   final String path;
   final IconData iconData;
   final String label;
   final bool menuOpened;
   final String currentPath;
 
-  const MenuToolsItemWidget({
+  const MenuToolsItemDS({
     required this.path,
     required this.iconData,
     required this.label,
