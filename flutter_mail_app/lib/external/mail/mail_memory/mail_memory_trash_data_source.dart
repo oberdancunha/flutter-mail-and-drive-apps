@@ -11,7 +11,7 @@ class MailMemoryTrashDataSource extends MailMemoryDataSource {
       MailDetailsDto(
         uid: uuid.v4(),
         fromOrTo: 'Trash 1',
-        replyTo: 'trash1@draft.com',
+        replyTo: 'trash1@trash.com',
         subject: 'Trash Mail 1',
         content: "Mail 1 in the trash.",
         wasRead: true,
@@ -20,7 +20,7 @@ class MailMemoryTrashDataSource extends MailMemoryDataSource {
       MailDetailsDto(
         uid: uuid.v4(),
         fromOrTo: 'Trash 2',
-        replyTo: 'trash2@draft.com',
+        replyTo: 'trash2@trash.com',
         subject: 'Trash Mail 2',
         content: "Mail 2 in the trash.",
         wasRead: true,
@@ -29,7 +29,7 @@ class MailMemoryTrashDataSource extends MailMemoryDataSource {
       MailDetailsDto(
         uid: uuid.v4(),
         fromOrTo: 'Trash 3',
-        replyTo: 'trash3@draft.com',
+        replyTo: 'trash3@trash.com',
         subject: 'Trash Mail 3',
         content: "Mail 3 in the trash.",
         wasRead: true,
@@ -38,7 +38,7 @@ class MailMemoryTrashDataSource extends MailMemoryDataSource {
       MailDetailsDto(
         uid: uuid.v4(),
         fromOrTo: 'Trash 4',
-        replyTo: 'trash4@draft.com',
+        replyTo: 'trash4@trash.com',
         subject: 'Trash Mail 4',
         content: "Mail 4 in the trash.",
         wasRead: true,
@@ -47,7 +47,7 @@ class MailMemoryTrashDataSource extends MailMemoryDataSource {
       MailDetailsDto(
         uid: uuid.v4(),
         fromOrTo: 'Trash 5',
-        replyTo: 'trash5@draft.com',
+        replyTo: 'trash5@trash.com',
         subject: 'Trash Mail 5',
         content: "Mail 5 in the trash.",
         wasRead: true,
@@ -56,7 +56,7 @@ class MailMemoryTrashDataSource extends MailMemoryDataSource {
       MailDetailsDto(
         uid: uuid.v4(),
         fromOrTo: 'Trash 6',
-        replyTo: 'trash6@draft.com',
+        replyTo: 'trash6@trash.com',
         subject: 'Trash Mail 6',
         content: "Mail 6 in the trash.",
         wasRead: true,
