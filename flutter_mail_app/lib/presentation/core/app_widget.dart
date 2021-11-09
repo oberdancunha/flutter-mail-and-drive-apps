@@ -7,7 +7,7 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DesignSystemModule(
-        title: 'Email App',
+        title: 'Mail App',
         initialRoute: Modular.initialRoute,
       );
 }
