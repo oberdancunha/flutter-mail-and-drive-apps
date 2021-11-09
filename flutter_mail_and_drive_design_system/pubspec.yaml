@@ -26,6 +26,8 @@ dependencies:
     sdk: flutter
   flutter_mail_and_drive_modules:
     path: ../flutter_mail_and_drive_modules
+  flutter_mail_and_drive_core:
+    path: ../flutter_mail_and_drive_core
 
 dev_dependencies:
   build_runner: ^2.1.2
