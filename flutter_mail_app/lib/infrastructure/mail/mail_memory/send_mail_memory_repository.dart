@@ -1,6 +1,6 @@
+import 'package:flutter_mail_and_drive_core/domain/core/exceptions.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
-import '../../../domain/core/exceptions.dart';
 import '../../../domain/core/failures.dart';
 import '../../../domain/mail/i_send_mail_repository.dart';
 import '../../../domain/mail/mail_details.dart';

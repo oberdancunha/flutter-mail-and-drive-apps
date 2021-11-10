@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:flutter_mail_and_drive_core/domain/core/exceptions.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
-import '../../../domain/core/exceptions.dart';
 import '../../../infrastructure/mail/mail_data_source.dart';
 import '../../../infrastructure/mail/mail_details_dto.dart';
 
