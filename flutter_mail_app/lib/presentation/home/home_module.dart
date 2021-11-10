@@ -8,7 +8,7 @@ import '../mail/mail_module.dart';
 import '../mail/sent_module.dart';
 import '../mail/trash_module.dart';
 import '../send/send_module.dart';
-import 'widgets/menu_tools/menu_tools_items.dart';
+import 'menu_tools/menu_tools_items.dart';
 
 class HomeModule extends Module {
   @override
