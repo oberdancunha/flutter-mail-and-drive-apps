@@ -16,3 +16,6 @@ export 'package:rxdart/rxdart.dart';
 export 'package:easy_debounce/easy_debounce.dart';
 export 'package:shimmer/shimmer.dart';
 export 'package:uuid/uuid.dart';
+export 'package:intl/intl.dart';
+export 'package:intl/date_symbol_data_local.dart';
+export 'package:marquee/marquee.dart';

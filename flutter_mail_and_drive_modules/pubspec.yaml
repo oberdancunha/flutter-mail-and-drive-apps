@@ -32,8 +32,10 @@ dependencies:
   flutter_triple: ^1.2.4+3
   fpdart: ^0.0.10
   freezed_annotation: ^0.14.3
+  intl: ^0.17.0
   keyboard_actions: ^3.4.4
   kt_dart: ^0.9.1
+  marquee: ^2.2.0
   native_device_orientation: ^1.0.0
   responsive_framework: ^0.1.4
   rxdart: ^0.27.2
