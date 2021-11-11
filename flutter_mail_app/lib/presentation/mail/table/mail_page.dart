@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mail_and_drive_design_system/components/app_template/app_template_ds.dart';
 import 'package:flutter_mail_and_drive_design_system/components/loading/loading_text_shimmer_ds.dart';
-import 'package:flutter_mail_and_drive_design_system/components/no_results/empty_result_ds.dart';
-import 'package:flutter_mail_and_drive_design_system/components/no_results/error_result_ds.dart';
+import 'package:flutter_mail_and_drive_design_system/components/no_result/empty_result_ds.dart';
+import 'package:flutter_mail_and_drive_design_system/components/no_result/error_result_ds.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
 import '../../../application/mail/mail_state.dart';
