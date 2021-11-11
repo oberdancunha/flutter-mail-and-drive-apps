@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EmptyResultWidget extends StatelessWidget {
-  const EmptyResultWidget({Key? key}) : super(key: key);
+class EmptyResultDS extends StatelessWidget {
+  const EmptyResultDS({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => SizedBox(

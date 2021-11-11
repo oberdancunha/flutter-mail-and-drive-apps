@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ErrorResultWidget extends StatelessWidget {
-  const ErrorResultWidget({Key? key}) : super(key: key);
+class ErrorResultDS extends StatelessWidget {
+  const ErrorResultDS({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => SizedBox(
