@@ -9,6 +9,7 @@ class LightThemeConfigureSource implements ThemeConfigureSource {
         indicatorColor: const Color(0xFFffffff),
         secondaryHeaderColor: const Color(0xFFECC371),
         fontFamily: 'OpenSans',
+        cardColor: Colors.grey.shade400,
       );
 
   @override

@@ -9,6 +9,7 @@ class DarkThemeConfigureSource implements ThemeConfigureSource {
         dialogBackgroundColor: const Color(0xFF898989),
         secondaryHeaderColor: const Color(0xFFE05750),
         fontFamily: 'OpenSans',
+        cardColor: Colors.black,
       );
 
   @override
