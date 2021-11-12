@@ -22,4 +22,9 @@ class DriveDto with _$DriveDto {
         fileSize: fileSize,
         createdAt: DateTime.parse(createdAt),
       );
+
+  bool search({required String term}) =>
+      name.toLowerCase().contains(term) ||
+      extension.toLowerCase().contains(term) ||
+      formatBytes(fileSize).toLowerCase().contains(term);
 }

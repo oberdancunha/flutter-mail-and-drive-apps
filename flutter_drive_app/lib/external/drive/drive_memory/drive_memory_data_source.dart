@@ -7,8 +7,18 @@ class DriveMemoryDataSource implements DriveDataSource {
   late List<DriveDto> files;
 
   @override
-  Future<List<DriveDto>> list() => Future.delayed(
+  Future<List<DriveDto>> list({String? term}) => Future.delayed(
         Duration.zero,
-        () => files,
+        () {
+          if (term != null) {
+            return files
+                .where(
+                  (file) => file.search(term: term.toLowerCase()),
+                )
+                .toList();
+          }
+
+          return files;
+        },
       ).onError((error, stackTrace) => throw UnexpectedException(error: error.toString()));
 }

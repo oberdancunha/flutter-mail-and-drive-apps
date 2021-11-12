@@ -14,9 +14,9 @@ class DriveMemoryRepository implements IDriveRepository {
   });
 
   @override
-  Future<Either<DriveFailure, KtList<Drive>>> list() async {
+  Future<Either<DriveFailure, KtList<Drive>>> list({String? term}) async {
     try {
-      final files = await driveDataSource.list();
+      final files = await driveDataSource.list(term: term);
 
       return right(files.map((file) => file.toDomain()).toImmutableList());
     } on UnexpectedException catch (error) {

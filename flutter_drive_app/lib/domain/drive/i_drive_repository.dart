@@ -4,5 +4,5 @@ import '../core/failures.dart';
 import 'drive.dart';
 
 abstract class IDriveRepository {
-  Future<Either<DriveFailure, KtList<Drive>>> list();
+  Future<Either<DriveFailure, KtList<Drive>>> list({String? term});
 }
