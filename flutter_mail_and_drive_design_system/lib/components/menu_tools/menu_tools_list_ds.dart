@@ -50,7 +50,7 @@ class _MenuToolsListDSState extends State<MenuToolsListDS> {
       top: 70,
       left: 1,
       right: _menuOpened
-          ? MediaQuery.of(context).size.width - 190
+          ? MediaQuery.of(context).size.width - 200
           : MediaQuery.of(context).size.width - (toolBarAdjustSize + 97),
       child: Container(
         color: Theme.of(context).dialogTheme.backgroundColor,
