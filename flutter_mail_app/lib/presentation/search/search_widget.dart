@@ -23,7 +23,7 @@ class _SearchWidgetState extends State<SearchWidget> {
 
   @override
   Widget build(BuildContext context) => SearchDS(
-        onPressed: () {
+        onSearchClearPressed: () {
           _controller.clear();
           _mailStore.search();
         },

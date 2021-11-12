@@ -4,12 +4,12 @@ import '../form/text_form_field_ds.dart';
 
 class SearchDS extends StatelessWidget {
   final TextEditingController controller;
-  final Function() onPressed;
+  final Function() onSearchClearPressed;
   final Function(String term) onChanged;
 
   const SearchDS({
     required this.controller,
-    required this.onPressed,
+    required this.onSearchClearPressed,
     required this.onChanged,
     Key? key,
   }) : super(key: key);
@@ -19,7 +19,7 @@ class SearchDS extends StatelessWidget {
         labelText: 'Pesquisar',
         suffixIcon: IconButton(
           icon: const Icon(Icons.clear_rounded),
-          onPressed: onPressed,
+          onPressed: onSearchClearPressed,
           iconSize: 30,
         ),
         height: 1,
