@@ -19,3 +19,4 @@ export 'package:uuid/uuid.dart';
 export 'package:intl/intl.dart';
 export 'package:intl/date_symbol_data_local.dart';
 export 'package:marquee/marquee.dart';
+export 'package:auto_size_text/auto_size_text.dart';
