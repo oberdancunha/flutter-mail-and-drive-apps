@@ -4,6 +4,7 @@ import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.da
 import '../drive/drive_module.dart';
 import '../drive/recent_module.dart';
 import '../drive/shared_module.dart';
+import '../drive/trash_module.dart';
 import 'menu_tools/menu_tools_items.dart';
 
 class HomeModule extends Module {
@@ -32,6 +33,10 @@ class HomeModule extends Module {
         ModuleRoute(
           '/recent',
           module: RecentModule(),
+        ),
+        ModuleRoute(
+          '/trash',
+          module: TrashModule(),
         ),
       ],
     ),
