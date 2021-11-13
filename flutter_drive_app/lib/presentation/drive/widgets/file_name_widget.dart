@@ -23,7 +23,7 @@ class _FileNameWidgetState extends State<FileNameWidget> {
   }
 
   @override
-  Widget build(BuildContext context) => widget.name.length > 25
+  Widget build(BuildContext context) => widget.name.length >= 17
       ? SizedBox(
           height: 20,
           child: Marquee(
