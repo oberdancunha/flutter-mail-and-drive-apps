@@ -5,7 +5,7 @@ final menuToolsItems = [
   const MenuToolsListModel(
     path: 'mail',
     iconData: Icons.inbox,
-    label: 'Inbox',
+    label: 'Meus emails',
   ),
   const MenuToolsListModel(
     path: 'sent',
