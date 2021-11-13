@@ -13,5 +13,6 @@ class Drive with _$Drive {
     required FileExtension extension,
     required double fileSize,
     required DateTime createdAt,
+    required KtList<String> shared,
   }) = _Drive;
 }

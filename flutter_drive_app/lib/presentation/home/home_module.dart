@@ -2,6 +2,7 @@ import 'package:flutter_mail_and_drive_design_system/components/home/home_page_d
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
 import '../drive/drive_module.dart';
+import '../drive/shared_module.dart';
 import 'menu_tools/menu_tools_items.dart';
 
 class HomeModule extends Module {
@@ -22,6 +23,10 @@ class HomeModule extends Module {
         ModuleRoute(
           '/drive',
           module: DriveModule(),
+        ),
+        ModuleRoute(
+          '/shared',
+          module: SharedModule(),
         ),
       ],
     ),

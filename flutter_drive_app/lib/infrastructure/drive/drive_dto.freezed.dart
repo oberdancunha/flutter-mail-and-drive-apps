@@ -21,12 +21,14 @@ class _$DriveDtoTearOff {
       {required String name,
       required String extension,
       required double fileSize,
-      required String createdAt}) {
+      required String createdAt,
+      List<String>? shared}) {
     return _DriveDto(
       name: name,
       extension: extension,
       fileSize: fileSize,
       createdAt: createdAt,
+      shared: shared,
     );
   }
 }
@@ -40,6 +42,7 @@ mixin _$DriveDto {
   String get extension => throw _privateConstructorUsedError;
   double get fileSize => throw _privateConstructorUsedError;
   String get createdAt => throw _privateConstructorUsedError;
+  List<String>? get shared => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DriveDtoCopyWith<DriveDto> get copyWith =>
@@ -50,7 +53,12 @@ mixin _$DriveDto {
 abstract class $DriveDtoCopyWith<$Res> {
   factory $DriveDtoCopyWith(DriveDto value, $Res Function(DriveDto) then) =
       _$DriveDtoCopyWithImpl<$Res>;
-  $Res call({String name, String extension, double fileSize, String createdAt});
+  $Res call(
+      {String name,
+      String extension,
+      double fileSize,
+      String createdAt,
+      List<String>? shared});
 }
 
 /// @nodoc
@@ -67,6 +75,7 @@ class _$DriveDtoCopyWithImpl<$Res> implements $DriveDtoCopyWith<$Res> {
     Object? extension = freezed,
     Object? fileSize = freezed,
     Object? createdAt = freezed,
+    Object? shared = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -85,6 +94,10 @@ class _$DriveDtoCopyWithImpl<$Res> implements $DriveDtoCopyWith<$Res> {
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String,
+      shared: shared == freezed
+          ? _value.shared
+          : shared // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -94,7 +107,12 @@ abstract class _$DriveDtoCopyWith<$Res> implements $DriveDtoCopyWith<$Res> {
   factory _$DriveDtoCopyWith(_DriveDto value, $Res Function(_DriveDto) then) =
       __$DriveDtoCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String extension, double fileSize, String createdAt});
+  $Res call(
+      {String name,
+      String extension,
+      double fileSize,
+      String createdAt,
+      List<String>? shared});
 }
 
 /// @nodoc
@@ -112,6 +130,7 @@ class __$DriveDtoCopyWithImpl<$Res> extends _$DriveDtoCopyWithImpl<$Res>
     Object? extension = freezed,
     Object? fileSize = freezed,
     Object? createdAt = freezed,
+    Object? shared = freezed,
   }) {
     return _then(_DriveDto(
       name: name == freezed
@@ -130,6 +149,10 @@ class __$DriveDtoCopyWithImpl<$Res> extends _$DriveDtoCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as String,
+      shared: shared == freezed
+          ? _value.shared
+          : shared // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -141,7 +164,8 @@ class _$_DriveDto extends _DriveDto {
       {required this.name,
       required this.extension,
       required this.fileSize,
-      required this.createdAt})
+      required this.createdAt,
+      this.shared})
       : super._();
 
   @override
@@ -152,10 +176,12 @@ class _$_DriveDto extends _DriveDto {
   final double fileSize;
   @override
   final String createdAt;
+  @override
+  final List<String>? shared;
 
   @override
   String toString() {
-    return 'DriveDto(name: $name, extension: $extension, fileSize: $fileSize, createdAt: $createdAt)';
+    return 'DriveDto(name: $name, extension: $extension, fileSize: $fileSize, createdAt: $createdAt, shared: $shared)';
   }
 
   @override
@@ -172,7 +198,9 @@ class _$_DriveDto extends _DriveDto {
                     .equals(other.fileSize, fileSize)) &&
             (identical(other.createdAt, createdAt) ||
                 const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)));
+                    .equals(other.createdAt, createdAt)) &&
+            (identical(other.shared, shared) ||
+                const DeepCollectionEquality().equals(other.shared, shared)));
   }
 
   @override
@@ -181,7 +209,8 @@ class _$_DriveDto extends _DriveDto {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(extension) ^
       const DeepCollectionEquality().hash(fileSize) ^
-      const DeepCollectionEquality().hash(createdAt);
+      const DeepCollectionEquality().hash(createdAt) ^
+      const DeepCollectionEquality().hash(shared);
 
   @JsonKey(ignore: true)
   @override
@@ -194,7 +223,8 @@ abstract class _DriveDto extends DriveDto {
       {required String name,
       required String extension,
       required double fileSize,
-      required String createdAt}) = _$_DriveDto;
+      required String createdAt,
+      List<String>? shared}) = _$_DriveDto;
   const _DriveDto._() : super._();
 
   @override
@@ -205,6 +235,8 @@ abstract class _DriveDto extends DriveDto {
   double get fileSize => throw _privateConstructorUsedError;
   @override
   String get createdAt => throw _privateConstructorUsedError;
+  @override
+  List<String>? get shared => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DriveDtoCopyWith<_DriveDto> get copyWith =>

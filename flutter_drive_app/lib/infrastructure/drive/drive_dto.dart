@@ -14,6 +14,7 @@ class DriveDto with _$DriveDto {
     required String extension,
     required double fileSize,
     required String createdAt,
+    List<String>? shared,
   }) = _DriveDto;
 
   Drive toDomain() => Drive(
@@ -21,6 +22,7 @@ class DriveDto with _$DriveDto {
         extension: detectFileExtension(extension),
         fileSize: fileSize,
         createdAt: DateTime.parse(createdAt),
+        shared: shared != null ? shared!.toImmutableList() : const KtList.empty(),
       );
 
   bool search({required String term}) =>

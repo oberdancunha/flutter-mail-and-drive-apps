@@ -21,12 +21,14 @@ class _$DriveTearOff {
       {required String name,
       required FileExtension extension,
       required double fileSize,
-      required DateTime createdAt}) {
+      required DateTime createdAt,
+      required KtList<String> shared}) {
     return _Drive(
       name: name,
       extension: extension,
       fileSize: fileSize,
       createdAt: createdAt,
+      shared: shared,
     );
   }
 }
@@ -40,6 +42,7 @@ mixin _$Drive {
   FileExtension get extension => throw _privateConstructorUsedError;
   double get fileSize => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
+  KtList<String> get shared => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DriveCopyWith<Drive> get copyWith => throw _privateConstructorUsedError;
@@ -53,7 +56,8 @@ abstract class $DriveCopyWith<$Res> {
       {String name,
       FileExtension extension,
       double fileSize,
-      DateTime createdAt});
+      DateTime createdAt,
+      KtList<String> shared});
 
   $FileExtensionCopyWith<$Res> get extension;
 }
@@ -72,6 +76,7 @@ class _$DriveCopyWithImpl<$Res> implements $DriveCopyWith<$Res> {
     Object? extension = freezed,
     Object? fileSize = freezed,
     Object? createdAt = freezed,
+    Object? shared = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -90,6 +95,10 @@ class _$DriveCopyWithImpl<$Res> implements $DriveCopyWith<$Res> {
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      shared: shared == freezed
+          ? _value.shared
+          : shared // ignore: cast_nullable_to_non_nullable
+              as KtList<String>,
     ));
   }
 
@@ -110,7 +119,8 @@ abstract class _$DriveCopyWith<$Res> implements $DriveCopyWith<$Res> {
       {String name,
       FileExtension extension,
       double fileSize,
-      DateTime createdAt});
+      DateTime createdAt,
+      KtList<String> shared});
 
   @override
   $FileExtensionCopyWith<$Res> get extension;
@@ -131,6 +141,7 @@ class __$DriveCopyWithImpl<$Res> extends _$DriveCopyWithImpl<$Res>
     Object? extension = freezed,
     Object? fileSize = freezed,
     Object? createdAt = freezed,
+    Object? shared = freezed,
   }) {
     return _then(_Drive(
       name: name == freezed
@@ -149,6 +160,10 @@ class __$DriveCopyWithImpl<$Res> extends _$DriveCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      shared: shared == freezed
+          ? _value.shared
+          : shared // ignore: cast_nullable_to_non_nullable
+              as KtList<String>,
     ));
   }
 }
@@ -160,7 +175,8 @@ class _$_Drive extends _Drive {
       {required this.name,
       required this.extension,
       required this.fileSize,
-      required this.createdAt})
+      required this.createdAt,
+      required this.shared})
       : super._();
 
   @override
@@ -171,10 +187,12 @@ class _$_Drive extends _Drive {
   final double fileSize;
   @override
   final DateTime createdAt;
+  @override
+  final KtList<String> shared;
 
   @override
   String toString() {
-    return 'Drive(name: $name, extension: $extension, fileSize: $fileSize, createdAt: $createdAt)';
+    return 'Drive(name: $name, extension: $extension, fileSize: $fileSize, createdAt: $createdAt, shared: $shared)';
   }
 
   @override
@@ -191,7 +209,9 @@ class _$_Drive extends _Drive {
                     .equals(other.fileSize, fileSize)) &&
             (identical(other.createdAt, createdAt) ||
                 const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)));
+                    .equals(other.createdAt, createdAt)) &&
+            (identical(other.shared, shared) ||
+                const DeepCollectionEquality().equals(other.shared, shared)));
   }
 
   @override
@@ -200,7 +220,8 @@ class _$_Drive extends _Drive {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(extension) ^
       const DeepCollectionEquality().hash(fileSize) ^
-      const DeepCollectionEquality().hash(createdAt);
+      const DeepCollectionEquality().hash(createdAt) ^
+      const DeepCollectionEquality().hash(shared);
 
   @JsonKey(ignore: true)
   @override
@@ -213,7 +234,8 @@ abstract class _Drive extends Drive {
       {required String name,
       required FileExtension extension,
       required double fileSize,
-      required DateTime createdAt}) = _$_Drive;
+      required DateTime createdAt,
+      required KtList<String> shared}) = _$_Drive;
   const _Drive._() : super._();
 
   @override
@@ -224,6 +246,8 @@ abstract class _Drive extends Drive {
   double get fileSize => throw _privateConstructorUsedError;
   @override
   DateTime get createdAt => throw _privateConstructorUsedError;
+  @override
+  KtList<String> get shared => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DriveCopyWith<_Drive> get copyWith => throw _privateConstructorUsedError;
