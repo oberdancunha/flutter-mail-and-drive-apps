@@ -54,6 +54,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - packages/flutter_mail_and_drive_design_system/assets/images/main_header.png
     - packages/flutter_mail_and_drive_login/assets/.argon2_env
     - assets/images/header.png
   #   - images/a_dot_burr.jpeg
