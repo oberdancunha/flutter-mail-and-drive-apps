@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mail_and_drive_core/functions/screen.dart';
 import 'package:flutter_mail_and_drive_design_system/components/modal/modal_window_ds.dart';
 import 'package:flutter_mail_and_drive_design_system/components/modal/show_modal_bottom_sheet_ds.dart';
 
@@ -42,10 +43,7 @@ class FileCardWidget extends StatelessWidget {
                       context: context,
                       widget: ModalWindowDS(
                         title: 'Compartilhado',
-                        height: MediaQuery.of(context).orientation == Orientation.portrait ||
-                                MediaQuery.of(context).size.height >= 700
-                            ? 260
-                            : null,
+                        height: isPortraitOrBigHeightLandscape(context) ? 260 : null,
                         child: Padding(
                           padding: const EdgeInsets.all(8),
                           child: FileSharedWidget(file: file),

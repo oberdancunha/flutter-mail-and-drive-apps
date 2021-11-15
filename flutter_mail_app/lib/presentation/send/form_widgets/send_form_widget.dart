@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mail_and_drive_core/functions/screen.dart';
 
 import 'send_form_landscape_widget.dart';
 import 'send_form_portrait_widget.dart';
@@ -9,8 +10,7 @@ class SendFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Form(
         autovalidateMode: AutovalidateMode.onUserInteraction,
-        child: MediaQuery.of(context).orientation == Orientation.portrait ||
-                MediaQuery.of(context).size.height >= 700
+        child: isPortraitOrBigHeightLandscape(context)
             ? const SendFormPortraitWidget()
             : const SendFormLandscapeWidget(),
       );
