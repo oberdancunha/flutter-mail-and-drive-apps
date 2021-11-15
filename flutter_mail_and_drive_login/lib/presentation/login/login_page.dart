@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mail_and_drive_design_system/components/header/main_header_logo_ds.dart';
+import 'package:flutter_mail_and_drive_core/functions/screen.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
 import '../../application/auth/auth_store.dart';
 import '../../application/login/login_store.dart';
 import 'widgets/loading/message_loading_widget.dart';
-import 'widgets/login_form_widget.dart';
+import 'widgets/login_landscape_widget.dart';
+import 'widgets/login_portrait_widget.dart';
 
 class LoginPage extends StatefulWidget {
   final String afterLoginPageRoute;
@@ -73,19 +74,7 @@ class _LoginPageState extends State<LoginPage> {
   );
 
   @override
-  Widget build(BuildContext context) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.35,
-            child: const Align(
-              alignment: Alignment.bottomCenter,
-              child: MainHeaderLogoDS(),
-            ),
-          ),
-          const Expanded(
-            child: LoginFormWidget(),
-          ),
-        ],
-      );
+  Widget build(BuildContext context) => isPortraitOrBigHeightLandscape(context)
+      ? const LoginPortraitWidget()
+      : const LoginLandscapeWidget();
 }
