@@ -1,9 +1,9 @@
 import '../../domain/auth/i_auth_repository.dart';
 
-class AuthStore {
+class AuthService {
   final IAuthRepository authRepository;
 
-  AuthStore({required this.authRepository}) : super();
+  AuthService({required this.authRepository}) : super();
 
   Future<void> addAuthentication(String token) async {
     await authRepository.addAuthentication(token);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mail_and_drive_core/functions/screen.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
-import '../../application/auth/auth_store.dart';
+import '../../application/auth/auth_service.dart';
 import '../../application/login/login_store.dart';
 import 'widgets/loading/message_loading_widget.dart';
 import 'widgets/login_landscape_widget.dart';
@@ -22,7 +22,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _loginStore = Modular.get<LoginStore>();
-  final _authStore = Modular.get<AuthStore>();
+  final _authService = Modular.get<AuthService>();
   late Disposer _loginStoreObserverToDispose;
 
   @override
@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             (token) async {
-              await _authStore.addAuthentication(token);
+              await _authService.addAuthentication(token);
               Modular.to.navigate(widget.afterLoginPageRoute);
             },
           );
