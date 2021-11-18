@@ -4,13 +4,9 @@ import '../../application/login/login_store.dart';
 import '../../domain/login/i_login_repository.dart';
 import '../../external/argon2_configuration/argon2_configuration_env_data_source.dart';
 import '../../external/encrypt/argon2_encrypt.dart';
-import '../../external/jwt/jwt_jaguar.dart';
-import '../../external/jwt_configuration/jwt_configuration_env_data_source.dart';
 import '../../external/login/login_random_data_source.dart';
 import '../../infrastructure/argon2_configuration/argon2_configuration_data_source.dart';
 import '../../infrastructure/encrypt/encrypt.dart';
-import '../../infrastructure/jwt/jwt.dart';
-import '../../infrastructure/jwt_configuration/jwt_configuration_data_source.dart';
 import '../../infrastructure/login/login_data_source.dart';
 import '../../infrastructure/login/login_repository.dart';
 import 'login_page.dart';
@@ -22,10 +18,10 @@ class LoginModule extends Module {
           (i) => Argon2ConfigurationEnvDataSource(),
         ),
         Bind.lazySingleton<Encrypt>((i) => Argon2Encrypt(argon2ConfigurationDataSource: i())),
-        Bind.lazySingleton<JwtConfigurationDataSource>((i) => JwtConfigurationEnvDataSource()),
-        Bind.lazySingleton<Jwt>((i) => JwtJaguar(jwtConfigurationDataSource: i())),
         Bind.lazySingleton<LoginDataSource>((i) => LoginRandomDataSource(jwt: i())),
-        Bind.lazySingleton<ILoginRepository>((i) => LoginRepository(loginDataSource: i())),
+        Bind.lazySingleton<ILoginRepository>(
+          (i) => LoginRepository(loginDataSource: i()),
+        ),
         Bind.lazySingleton(
           (i) => LoginStore(
             encrypt: i(),
