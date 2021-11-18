@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mail_and_drive_login/presentation/welcome/welcome_widget.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
 import '../component/button_change_theme.dart';
@@ -46,10 +47,16 @@ class _DesignSystemBodyState extends State<DesignSystemBody> {
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: ButtonChangeTheme(),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const WelcomeWidget(),
+                            Align(
+                              alignment: Alignment.topRight,
+                              child: ButtonChangeTheme(),
+                            ),
+                          ],
                         ),
                       ),
                       Expanded(

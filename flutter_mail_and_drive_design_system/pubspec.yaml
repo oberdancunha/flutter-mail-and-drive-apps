@@ -28,6 +28,8 @@ dependencies:
     path: ../flutter_mail_and_drive_modules
   flutter_mail_and_drive_core:
     path: ../flutter_mail_and_drive_core
+  flutter_mail_and_drive_login:
+    path: ../flutter_mail_and_drive_login
 
 dev_dependencies:
   build_runner: ^2.1.2
