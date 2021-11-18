@@ -11,6 +11,6 @@ class AuthService {
 
   Future<bool> isLogged() async => (await authRepository.getAuthentication()).fold(
         (_) => false,
-        (token) => token.isNotEmpty,
+        (_) => true,
       );
 }
