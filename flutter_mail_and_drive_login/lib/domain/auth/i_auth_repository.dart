@@ -6,4 +6,5 @@ abstract class IAuthRepository {
   Future<Either<Failure, void>> addAuthentication(String token);
   Future<Either<Failure, String>> getAuthentication();
   Future<Either<Failure, void>> removeAuthentication();
+  Either<Failure, String> getUserLogged(String token);
 }

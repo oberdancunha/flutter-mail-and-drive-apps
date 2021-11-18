@@ -6,4 +6,5 @@ part 'failures.freezed.dart';
 abstract class Failure with _$Failure {
   const factory Failure.invalidEmailAndPassword() = InvalidEmailAndPassword;
   const factory Failure.authenticationError({required String errorMessage}) = AuthenticationError;
+  const factory Failure.notUserAuthenticationError() = _NotUserAuthenticationError;
 }

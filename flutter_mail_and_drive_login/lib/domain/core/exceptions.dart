@@ -5,3 +5,5 @@ class AuthenticationException implements Exception {
 
   AuthenticationException({required this.errorMessage});
 }
+
+class NotUserAuthenticationException implements Exception {}
