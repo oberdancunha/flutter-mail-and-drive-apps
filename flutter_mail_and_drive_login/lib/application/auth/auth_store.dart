@@ -2,11 +2,12 @@ import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.da
 
 import '../../domain/auth/i_auth_repository.dart';
 import '../../domain/core/failures.dart';
+import 'auth_state.dart';
 
-class AuthStore extends StreamStore<Failure, String> {
+class AuthStore extends StreamStore<Failure, AuthState> {
   final IAuthRepository authRepository;
 
-  AuthStore({required this.authRepository}) : super('');
+  AuthStore({required this.authRepository}) : super(AuthState.initial());
 
   Future<void> getUserLogged() async {
     final authentication = await authRepository.getAuthentication();
@@ -15,7 +16,12 @@ class AuthStore extends StreamStore<Failure, String> {
       (token) {
         authRepository.getUserLogged(token).fold(
               setError,
-              update,
+              (user) => update(
+                state.copyWith(
+                  user: user,
+                  isAuthenticationVerified: true,
+                ),
+              ),
             );
       },
     );

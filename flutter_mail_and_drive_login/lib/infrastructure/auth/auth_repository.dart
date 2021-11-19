@@ -31,7 +31,7 @@ class AuthRepository implements IAuthRepository {
     try {
       final token = await authDataSource.getAuthentication();
       if (token.isEmpty) {
-        return left(const Failure.notUserAuthenticationError());
+        return left(const Failure.userNotLogged());
       }
 
       return right(token);

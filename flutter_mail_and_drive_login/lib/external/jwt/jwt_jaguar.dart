@@ -24,14 +24,15 @@ class JwtJaguar implements Jwt {
 
   @override
   String getUserLogged(String token) {
-    final jwt = verifyJwtHS256Signature(
-      token,
-      jwtConfigurationDataSource.secretKey,
-    );
-    if (jwt.subject!.isNotEmpty) {
+    try {
+      final jwt = verifyJwtHS256Signature(
+        token,
+        jwtConfigurationDataSource.secretKey,
+      );
+
       return jwt.subject!;
-    } else {
-      throw NotUserAuthenticationException();
+    } on JwtException catch (error) {
+      throw NotUserAuthenticationException(errorMessage: error.message);
     }
   }
 }
