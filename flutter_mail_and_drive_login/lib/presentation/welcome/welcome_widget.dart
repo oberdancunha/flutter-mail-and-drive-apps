@@ -3,6 +3,7 @@ import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.da
 
 import '../../application/auth/auth_store.dart';
 import '../../domain/core/failures.dart';
+import '../logout/logout_widget.dart';
 
 class WelcomeWidget extends StatefulWidget {
   const WelcomeWidget({Key? key}) : super(key: key);
@@ -13,14 +14,13 @@ class WelcomeWidget extends StatefulWidget {
 
 class _WelcomeWidgetState extends State<WelcomeWidget> {
   final _authStore = Modular.get<AuthStore>();
-  late String user;
-  late double fontSize;
+  late double _fontSize;
 
   @override
   void initState() {
     super.initState();
     _authStore.getUserLogged();
-    fontSize = 16;
+    _fontSize = 16;
   }
 
   @override
@@ -34,16 +34,18 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                     'Bem vindo ',
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
-                      fontSize: fontSize,
+                      fontSize: _fontSize,
                     ),
                   ),
                   Text(
                     user,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: fontSize,
+                      fontSize: _fontSize,
                     ),
                   ),
+                  const SizedBox(width: 10),
+                  const LogoutWidget(),
                 ],
               )
             : const SizedBox.shrink(),

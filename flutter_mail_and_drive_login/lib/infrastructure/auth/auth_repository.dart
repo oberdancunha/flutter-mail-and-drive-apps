@@ -47,7 +47,7 @@ class AuthRepository implements IAuthRepository {
 
       return right(null);
     } on AuthenticationException catch (exception) {
-      return left(Failure.authenticationError(errorMessage: exception.errorMessage));
+      return left(Failure.removeAuthenticationError(errorMessage: exception.errorMessage));
     }
   }
 

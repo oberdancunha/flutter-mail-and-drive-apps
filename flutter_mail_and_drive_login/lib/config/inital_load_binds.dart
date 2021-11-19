@@ -2,6 +2,7 @@ import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.da
 
 import '../application/auth/auth_service.dart';
 import '../application/auth/auth_store.dart';
+import '../application/auth_logout/auth_logout_store.dart';
 import '../domain/auth/i_auth_repository.dart';
 import '../external/auth/auth_shared_preference_data_source.dart';
 import '../external/jwt/jwt_jaguar.dart';
@@ -25,4 +26,5 @@ final loginAppInitialLoadBinds = [
   ),
   Bind.lazySingleton((i) => AuthService(authRepository: i())),
   Bind.lazySingleton((i) => AuthStore(authRepository: i())),
+  Bind.lazySingleton((i) => AuthLogoutStore(authRepository: i())),
 ];

@@ -27,6 +27,13 @@ class _$FailureTearOff {
     );
   }
 
+  _RemoveAuthenticationError removeAuthenticationError(
+      {required String errorMessage}) {
+    return _RemoveAuthenticationError(
+      errorMessage: errorMessage,
+    );
+  }
+
   _NotUserAuthenticationError notUserAuthenticationError() {
     return const _NotUserAuthenticationError();
   }
@@ -41,6 +48,7 @@ mixin _$Failure {
   TResult when<TResult extends Object?>({
     required TResult Function() invalidEmailAndPassword,
     required TResult Function(String errorMessage) authenticationError,
+    required TResult Function(String errorMessage) removeAuthenticationError,
     required TResult Function() notUserAuthenticationError,
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +56,7 @@ mixin _$Failure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +64,7 @@ mixin _$Failure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
     required TResult orElse(),
   }) =>
@@ -64,6 +74,8 @@ mixin _$Failure {
     required TResult Function(InvalidEmailAndPassword value)
         invalidEmailAndPassword,
     required TResult Function(AuthenticationError value) authenticationError,
+    required TResult Function(_RemoveAuthenticationError value)
+        removeAuthenticationError,
     required TResult Function(_NotUserAuthenticationError value)
         notUserAuthenticationError,
   }) =>
@@ -72,6 +84,8 @@ mixin _$Failure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
   }) =>
@@ -80,6 +94,8 @@ mixin _$Failure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
     required TResult orElse(),
@@ -144,6 +160,7 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
   TResult when<TResult extends Object?>({
     required TResult Function() invalidEmailAndPassword,
     required TResult Function(String errorMessage) authenticationError,
+    required TResult Function(String errorMessage) removeAuthenticationError,
     required TResult Function() notUserAuthenticationError,
   }) {
     return invalidEmailAndPassword();
@@ -154,6 +171,7 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
   }) {
     return invalidEmailAndPassword?.call();
@@ -164,6 +182,7 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
     required TResult orElse(),
   }) {
@@ -179,6 +198,8 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
     required TResult Function(InvalidEmailAndPassword value)
         invalidEmailAndPassword,
     required TResult Function(AuthenticationError value) authenticationError,
+    required TResult Function(_RemoveAuthenticationError value)
+        removeAuthenticationError,
     required TResult Function(_NotUserAuthenticationError value)
         notUserAuthenticationError,
   }) {
@@ -190,6 +211,8 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
   }) {
@@ -201,6 +224,8 @@ class _$InvalidEmailAndPassword implements InvalidEmailAndPassword {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
     required TResult orElse(),
@@ -284,6 +309,7 @@ class _$AuthenticationError implements AuthenticationError {
   TResult when<TResult extends Object?>({
     required TResult Function() invalidEmailAndPassword,
     required TResult Function(String errorMessage) authenticationError,
+    required TResult Function(String errorMessage) removeAuthenticationError,
     required TResult Function() notUserAuthenticationError,
   }) {
     return authenticationError(errorMessage);
@@ -294,6 +320,7 @@ class _$AuthenticationError implements AuthenticationError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
   }) {
     return authenticationError?.call(errorMessage);
@@ -304,6 +331,7 @@ class _$AuthenticationError implements AuthenticationError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
     required TResult orElse(),
   }) {
@@ -319,6 +347,8 @@ class _$AuthenticationError implements AuthenticationError {
     required TResult Function(InvalidEmailAndPassword value)
         invalidEmailAndPassword,
     required TResult Function(AuthenticationError value) authenticationError,
+    required TResult Function(_RemoveAuthenticationError value)
+        removeAuthenticationError,
     required TResult Function(_NotUserAuthenticationError value)
         notUserAuthenticationError,
   }) {
@@ -330,6 +360,8 @@ class _$AuthenticationError implements AuthenticationError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
   }) {
@@ -341,6 +373,8 @@ class _$AuthenticationError implements AuthenticationError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
     required TResult orElse(),
@@ -360,6 +394,164 @@ abstract class AuthenticationError implements Failure {
   @JsonKey(ignore: true)
   $AuthenticationErrorCopyWith<AuthenticationError> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$RemoveAuthenticationErrorCopyWith<$Res> {
+  factory _$RemoveAuthenticationErrorCopyWith(_RemoveAuthenticationError value,
+          $Res Function(_RemoveAuthenticationError) then) =
+      __$RemoveAuthenticationErrorCopyWithImpl<$Res>;
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$RemoveAuthenticationErrorCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res>
+    implements _$RemoveAuthenticationErrorCopyWith<$Res> {
+  __$RemoveAuthenticationErrorCopyWithImpl(_RemoveAuthenticationError _value,
+      $Res Function(_RemoveAuthenticationError) _then)
+      : super(_value, (v) => _then(v as _RemoveAuthenticationError));
+
+  @override
+  _RemoveAuthenticationError get _value =>
+      super._value as _RemoveAuthenticationError;
+
+  @override
+  $Res call({
+    Object? errorMessage = freezed,
+  }) {
+    return _then(_RemoveAuthenticationError(
+      errorMessage: errorMessage == freezed
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_RemoveAuthenticationError implements _RemoveAuthenticationError {
+  const _$_RemoveAuthenticationError({required this.errorMessage});
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'Failure.removeAuthenticationError(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _RemoveAuthenticationError &&
+            (identical(other.errorMessage, errorMessage) ||
+                const DeepCollectionEquality()
+                    .equals(other.errorMessage, errorMessage)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(errorMessage);
+
+  @JsonKey(ignore: true)
+  @override
+  _$RemoveAuthenticationErrorCopyWith<_RemoveAuthenticationError>
+      get copyWith =>
+          __$RemoveAuthenticationErrorCopyWithImpl<_RemoveAuthenticationError>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidEmailAndPassword,
+    required TResult Function(String errorMessage) authenticationError,
+    required TResult Function(String errorMessage) removeAuthenticationError,
+    required TResult Function() notUserAuthenticationError,
+  }) {
+    return removeAuthenticationError(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? invalidEmailAndPassword,
+    TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
+    TResult Function()? notUserAuthenticationError,
+  }) {
+    return removeAuthenticationError?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidEmailAndPassword,
+    TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
+    TResult Function()? notUserAuthenticationError,
+    required TResult orElse(),
+  }) {
+    if (removeAuthenticationError != null) {
+      return removeAuthenticationError(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmailAndPassword value)
+        invalidEmailAndPassword,
+    required TResult Function(AuthenticationError value) authenticationError,
+    required TResult Function(_RemoveAuthenticationError value)
+        removeAuthenticationError,
+    required TResult Function(_NotUserAuthenticationError value)
+        notUserAuthenticationError,
+  }) {
+    return removeAuthenticationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
+    TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
+    TResult Function(_NotUserAuthenticationError value)?
+        notUserAuthenticationError,
+  }) {
+    return removeAuthenticationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
+    TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
+    TResult Function(_NotUserAuthenticationError value)?
+        notUserAuthenticationError,
+    required TResult orElse(),
+  }) {
+    if (removeAuthenticationError != null) {
+      return removeAuthenticationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RemoveAuthenticationError implements Failure {
+  const factory _RemoveAuthenticationError({required String errorMessage}) =
+      _$_RemoveAuthenticationError;
+
+  String get errorMessage => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$RemoveAuthenticationErrorCopyWith<_RemoveAuthenticationError>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -406,6 +598,7 @@ class _$_NotUserAuthenticationError implements _NotUserAuthenticationError {
   TResult when<TResult extends Object?>({
     required TResult Function() invalidEmailAndPassword,
     required TResult Function(String errorMessage) authenticationError,
+    required TResult Function(String errorMessage) removeAuthenticationError,
     required TResult Function() notUserAuthenticationError,
   }) {
     return notUserAuthenticationError();
@@ -416,6 +609,7 @@ class _$_NotUserAuthenticationError implements _NotUserAuthenticationError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
   }) {
     return notUserAuthenticationError?.call();
@@ -426,6 +620,7 @@ class _$_NotUserAuthenticationError implements _NotUserAuthenticationError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? invalidEmailAndPassword,
     TResult Function(String errorMessage)? authenticationError,
+    TResult Function(String errorMessage)? removeAuthenticationError,
     TResult Function()? notUserAuthenticationError,
     required TResult orElse(),
   }) {
@@ -441,6 +636,8 @@ class _$_NotUserAuthenticationError implements _NotUserAuthenticationError {
     required TResult Function(InvalidEmailAndPassword value)
         invalidEmailAndPassword,
     required TResult Function(AuthenticationError value) authenticationError,
+    required TResult Function(_RemoveAuthenticationError value)
+        removeAuthenticationError,
     required TResult Function(_NotUserAuthenticationError value)
         notUserAuthenticationError,
   }) {
@@ -452,6 +649,8 @@ class _$_NotUserAuthenticationError implements _NotUserAuthenticationError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
   }) {
@@ -463,6 +662,8 @@ class _$_NotUserAuthenticationError implements _NotUserAuthenticationError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmailAndPassword value)? invalidEmailAndPassword,
     TResult Function(AuthenticationError value)? authenticationError,
+    TResult Function(_RemoveAuthenticationError value)?
+        removeAuthenticationError,
     TResult Function(_NotUserAuthenticationError value)?
         notUserAuthenticationError,
     required TResult orElse(),
