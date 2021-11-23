@@ -10,6 +10,7 @@ class AuthStore extends StreamStore<Failure, AuthState> {
   AuthStore({required this.authRepository}) : super(AuthState.initial());
 
   Future<void> getUserLogged() async {
+    update(AuthState.initial());
     final authentication = await authRepository.getAuthentication();
     authentication.fold(
       setError,
