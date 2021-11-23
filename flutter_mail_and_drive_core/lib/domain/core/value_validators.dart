@@ -1,5 +1,6 @@
-import 'package:flutter_mail_and_drive_core/domain/core/value_failures.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
+
+import 'value_failures.dart';
 
 Either<ValueFailure<String>, String> validateEmail(String email) {
   final emailRegex = RegExp(
