@@ -47,6 +47,7 @@ A aplicação do design system é responsável pela identidade visual do aplicat
 Até mesmo o botão para a troca do tema (claro ou escuro) localizado no topo é um widget pertencente a essa aplicação, bem como a persistência do tema escolhido, ou seja, caso o usuário escolha utilizar o tema claro, quando o aplicativo for aberto em um outro momento, este será o tema carregado.
 
 Botão para trocar o tema claro para o escuro.
+
 <img
   src="images/button_to_dark.png"
   alt="button_to_dark"
@@ -55,6 +56,7 @@ Botão para trocar o tema claro para o escuro.
 />
 
 Botão para trocar o tema escuro para o claro.
+
 <img
   src="images/button_to_light.png"
   alt="button_to_light"
@@ -84,6 +86,7 @@ Talvez na grande maioria de outros projetos, poderia ser um produto de gerenciam
 A tela traz no cabeçalho um logo que simboliza o grupo de produtos desse projeto. Logo abaixo os campos para informar o email e a senha, seguido do botão de envio para validação. 
 
 Layout no formato retrato.
+
 <img
   src="images/login_portrait.png"
   alt="login_portrait"
@@ -94,6 +97,7 @@ Layout no formato retrato.
 />
 
 Layout no formato paisagem.
+
 <img
   src="images/login_landscape.png"
   alt="login_landscape"
