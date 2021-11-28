@@ -36,23 +36,23 @@ Este projeto apresenta um modelo conceitual de uma família de produtos que, nes
 
 ### Aviso importante
 
-Esclarecendo desde já que nenhum desses produtos são funcionais e sim apenas modelos conceituais. Alguns os dados usados estão em memória e outros poucos são persistidos e não há requisição a APIs. 
+Esclarecendo desde já que nenhum desses produtos são funcionais e sim apenas modelos conceituais. Alguns dados usados estão em memória e outros poucos são persistidos e não há requisição a APIs. 
 
 Por este motivo, esse projeto não possui testes. Portanto, apesar do uso de alguns conceitos de SOLID, Clean Code e Clean Architecture, esse projeto não tem como motivação ser exemplo de boas práticas de desenvolvimento de software, mas somente um modelo de como construir um produto através do encaixe de múltiplas aplicações.
 
 O autor desse projeto defende o uso de testes na construção de softwares. Basta olhar os outros projetos disponibilizados no Github. Todos possuem testes, sobretudo em suas camadas mais sensíveis. O não uso dos testes neste projeto ocorre devido ao caráter conceitual e não funcional das aplicações. Se em algum momento esse repositório for usado como molde para um projeto real, NÃO DEIXE DE REALIZAR OS TESTES.
 
-### Aplicações de produtos
+### Aplicação e produto/aplicativo
 
-Este projeto está dividido em 6 partes, que dividiremos em dois grupos: <b> aplicações</b> e <b>produto</b>
+Este projeto está dividido em 6 partes, que dividiremos em dois grupos: <b> aplicação</b> e <b>produto/aplicativo</b>
 
-#### Aplicações
+#### Aplicação
 
 Temos 4 aplicações, utilizadas na construção do produto Mail App e Drive App. 
 
 ##### flutter_mail_and_drive_modules 
 
-As bibliotecas que serão usadas por todo o projeto estarão registradas e disponibilizadas nessa aplicação. Dessa forma se uma dada biblioteca tiver uma nova versão disponível para a correção de problema de bug ou desempenho, a correção será refletida por todo o projeto. Assim como o efeito contrário também se aplica. Caso uma outra versão trouxer algum problema, esse também será refletido por todo o projeto.
+As bibliotecas que usadas por todo o projeto estão registradas e disponibilizadas nessa aplicação. Dessa forma se uma dada biblioteca tiver uma nova versão disponível para a correção de problema de bug ou desempenho, a correção será refletida por todo o projeto. Assim como o efeito contrário também se aplica. Caso uma outra versão trouxer algum problema, esse também será refletido por todo o projeto.
 
 Por isso é necessário uma atenção especial: as diferenças entre as versões de uma biblioteca (seja upgrade ou downgrade), comumente chamado de <i>breaking change</i>, precisa ser muito bem estudado e debatido entre os membros da equipe do projeto, principalmente a relação esforço de refatoração versus benefícios proporcionados.
 
@@ -64,7 +64,7 @@ Por exemplo, a classe <i>EmailValue</i> (<i>value object</i> para a validação 
 
 ##### flutter_mail_and_drive_design_system
 
-A aplicação do design system é responsável pela identidade visual do aplicativo de login e dos produtos Mail App e Drive App. É tudo o que está relacionado com a parte visual do projeto, desde a cor de fundo, cor e formato dos botões, cor e formato dos campos de textos, entre outros, está configurado nessa aplicação. 
+A aplicação do design system é responsável pela identidade visual da aplicação de login e dos produtos Mail App e Drive App. É tudo o que está relacionado com a parte visual do projeto, desde a cor de fundo, cor e formato dos botões, cor e formato dos campos de textos, entre outros, está configurado nessa aplicação. 
 
 Até mesmo o botão para a troca do tema (claro ou escuro), localizado no topo, é um widget pertencente a essa aplicação, bem como a persistência do tema escolhido, ou seja, caso o usuário escolha utilizar o tema claro, quando o aplicativo for aberto em um outro momento, este será o tema carregado.
 
@@ -94,14 +94,14 @@ Da forma como o projeto foi desenvolvido, esse tipo de customização torna-se a
 
 ##### flutter_mail_and_drive_login
 
-Dentre os aplicativos, esse é o que mais se aproxima de ser um produto, devido as seguintes características:
+Dentre as aplicações, esse é o que mais se aproxima de ser um produto, devido as seguintes características:
 
 1. Tela
 2. Validações
 3. Simulação de funcionalidade
 4. Persistência de dados
 
-Talvez na grande maioria de outros projetos, poderia ser um produto de gerenciamento de usuário. Neste ficou restrito a um aplicativo de login.
+Talvez na grande maioria de outros projetos, poderia ser um produto de gerenciamento de usuário. Neste ficou restrito a uma aplicação de login.
 
 <b> 1. Tela </b>
 
@@ -131,9 +131,9 @@ Layout no formato paisagem.
 
 <b> 2. Validações </b>
 
-A única validação presente nesse aplicativo é a senha, onde é obrigatório conter um caractere maíusculo, um minúsculo, um número e um símbolo, além do tamanho mínimo de 8 caracteres.
+A única validação presente nessa aplicação é a senha, onde é obrigatório conter um caractere maíusculo, um minúsculo, um número e um símbolo, além do tamanho mínimo de 8 caracteres.
 
-A validação da sintaxe de email, que no início do projeto estava contido nesse aplicativo, foi transferido para o core, pois também é utilizado em Mail App.
+A validação da sintaxe de email, que no início do projeto estava contido nessa aplicação, foi transferido para o core, pois também é utilizado em Mail App.
 
 <p float="left">
   <img
@@ -185,11 +185,11 @@ Uma implementação altamente simplista, que apenas reforça o caráter conceitu
 
 A persistência está no armazenamento do token na base de dados do dispositivo, possibilitando mostrar a identidade do usuário logado nos produtos (Mail App e Drive App), além da possibilidade de manter a sessão ao abrir o aplicativo posteriormente, acessando os dados sem a necessidade de realizar o login novamente, a não ser que o usuário faça o logout.
 
-#### Produto
+#### Produto/aplicativo
 
 ##### flutter_mail_app (Mail App) 
 
-É a aplicação para simular o gerenciamento de email. Basicamente o aplicativo fornece quatro tipos de tabelas de emails fictícios: Meu emails (inbox), enviados, rascunho e lixeira. 
+É um produto para simular o gerenciamento de email. Basicamente o aplicativo fornece quatro tipos de tabelas de emails fictícios: Meu emails (inbox), enviados, rascunho e lixeira. 
 
 Cada tabela fornece a possibilidade de realizar a navegação entre os dados, além da pesquisa de um email de interesse através de um termo de busca. Essa pesquisa engloba os seguintes dados: de/para, assunto e mensagem. A data do email não está contida na busca.
 
@@ -255,11 +255,11 @@ Ao fechar o aplicativo e abrir posteriormente, recupera-se a sessão de login e 
 
 ##### flutter_drive_app (Drive App) 
 
-É a aplicação para simular um repositório de arquivos. Esta é uma aplicação até mais simples do que o Mail App. Enquanto o Mail App possui até mesmo uma simulação de envio de email, o Drive App ficou restrito somente a visualização de "arquivos".
+É um produto para simular o repositório de arquivos. Este é um aplicativo até mais simples do que o Mail App. Enquanto o Mail App possui até mesmo uma simulação de envio de email, o Drive App ficou restrito somente a visualização de "arquivos".
 
 No entanto, o Drive App faz muito bem o seu papel ao ser comparado com o Mail App, que é mostrar a identidade visual dos produtos, resultado da estratégia de separar o layout em uma aplicação própria.
 
-Assim como nas tabelas do Mail App, cada lista de arquivos compartilha o mesmo código, tanto da listagem em si quanto da busca. A troca dos dados também ocorre através da injeção de dependência, onde, para cada opção escolhida, a respectiva classe contendo os dados estáticos é injetada na classe do repositório responsável pela listagem.
+Assim como nas tabelas do Mail App, cada lista de arquivos compartilha o mesmo código, tanto na listagem em si quanto na busca. A troca dos dados também ocorre através da injeção de dependência, onde, para cada opção escolhida, a respectiva classe contendo os dados estáticos é injetada na classe do repositório responsável pela listagem.
 
 <p float="left">
   <img
