@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mail_and_drive_core/functions/screen.dart';
 import 'package:flutter_mail_and_drive_modules/flutter_mail_and_drive_modules.dart';
 
 class MenuToolsItemDS extends StatelessWidget {
@@ -58,6 +59,11 @@ class MenuToolsItemDS extends StatelessWidget {
         style: TextStyle(
           color: color,
           fontWeight: FontWeight.bold,
+          fontSize: isPortraitOrBigHeightLandscape(context)
+              ? 14
+              : menuOpened && label.length <= 10
+                  ? 14
+                  : 11,
         ),
       );
 }
