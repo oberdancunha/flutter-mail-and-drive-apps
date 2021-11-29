@@ -61,7 +61,7 @@ class MenuToolsItemDS extends StatelessWidget {
           fontWeight: FontWeight.bold,
           fontSize: isPortraitOrBigHeightLandscape(context)
               ? 14
-              : menuOpened && label.length <= 10
+              : menuOpened && label.length <= 11
                   ? 14
                   : 11,
         ),
